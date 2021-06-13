@@ -106,14 +106,14 @@ function PhotoList({ category }) {
         <div>
             <div className="flex-row">
                 {currentPhotos.map((image, i) => (
-                    <>
+                    <React.Fragment key={image.name}>
                         <img
                             src={require(`../../assets/small/${category}/${i}.jpg`).default}
                             alt={image.name}
                             className="img-thumbnail mx-1"
-                            key={image.name}
+
                         />
-                    </>
+                    </React.Fragment>
                 ))}
             </div>
         </div>
